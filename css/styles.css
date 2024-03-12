@@ -120,13 +120,12 @@ img{
 }
 
 .hero {
+    margin: 0 auto;
+    width: 1440px;
     padding: 188px 0;
-    background-image: linear-gradient(
-        to bottom,
-        var(--grey), 
-        var(--primary-brand-color)), 
-    url("../images/people-office.jpg");
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
     background-position: 50% 50%;
+    background-size: cover;
     background-repeat:no-repeat;
 }
 
@@ -161,6 +160,7 @@ img{
     margin-top: 48px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .hero-button:hover,
@@ -248,11 +248,41 @@ img{
     background-color: var(--white-color);
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .member-info{
     padding: 32px 0;
     text-align: center;
+}
+
+.social-media-container{
+    margin: 0 auto;
+}
+
+.social-media-list{
+    display: flex;
+    gap: 24px;
+}
+
+.social-media-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary-brand-color);
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        border-radius: 50%;
+}
+
+.social-media-icon{
+    fill: var(--white-color);
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
 }
 
 .member-info .section-item-title{
@@ -290,9 +320,16 @@ img{
 
 .footer-info{
     background-color: var(--dark-color);
-    display: flex;
-    flex-direction: column;
     padding:100px 0;
+}
+
+footer .container{
+    display: flex;
+    gap: 120px;
+}
+
+.footer-text{
+    flex-direction: column;
 }
 
 footer .logo{
@@ -303,7 +340,22 @@ footer .logo{
 footer .logo > .logo-separation{
     color: var(--light-color);
 }
+
 .footer-paragraph{
     max-width: 264px;
     color: var(--light-color);
+}
+
+.footer-social-media{
+    flex-direction: row;
+}
+
+.footer-social-media p{
+    color: var(--light-color);
+    font-weight: 500;
+}
+
+footer .social-media-icon{
+    width: 24px;
+    height: 24px;
 }
