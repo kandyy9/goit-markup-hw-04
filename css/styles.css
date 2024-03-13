@@ -7,6 +7,7 @@
     --light-color:#F4F4FD;
     --light-slate: #8e8f99;
     --grey: rgba(46, 47, 66, 0.2);
+    --green: #31D0AA;
 }
 body{
     margin: 0;
@@ -384,11 +385,12 @@ img{
 
 footer .container{
     display: flex;
-    gap: 120px;
+    align-items: baseline;
 }
 
 .footer-text{
     flex-direction: column;
+    margin-right: 120px;
 }
 
 footer .logo{
@@ -402,19 +404,23 @@ footer .logo > .logo-separation{
 
 .footer-paragraph{
     max-width: 264px;
-    color: var(--light-color);
+    color: var(--white-color);
+}
+
+.footer-social-media-list{
+    gap:16px;
 }
 
 .footer-social-media{
     flex-direction: row;
 }
 
-.footer-social-media p{
-    color: var(--light-color);
+.footer-social-text{
+    color: var(--white-color);
     font-weight: 500;
 }
 
-footer .social-media-icon{
-    width: 24px;
-    height: 24px;
+footer .social-media-link:hover,
+footer .social-media-link:focus{
+    background-color: var(--green);
 }
